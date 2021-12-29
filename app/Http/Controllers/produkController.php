@@ -39,17 +39,18 @@ class produkController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'id_member' => 'required',
-            'nama_produk' => 'required',
-            'harga_produk' => 'required',
-            'total_item' => 'required',
-            'deskripsi' => 'required',
-            'cover' => 'required',
-
+            'nama' => 'required',
+            'harga' => 'required',
+            'total' => 'required',
+            'deskripsi' => 'required'
         ]);
 
         $produk = new produk;
-        $produk->nama_produk = $request->nama_produk;
+        $produk->nama_produk = $request->nama;
+        $produk->harga_produk = $request->harga;
+        $produk->total_item = $request->total;
+        $produk->deskripsi = $request->deskripsi;
+        $produk->cover = $request->cover;
         $produk->save();
         return redirect()->route('produk.index');
     }

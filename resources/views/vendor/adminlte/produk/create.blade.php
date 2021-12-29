@@ -18,12 +18,12 @@
             <div class="card">
                 <div class="card-header">Data produk</div>
                 <div class="card-body">
-                    <form action="{{route('produk.store')}}" method="post">
+                    <form action="{{route('produk.store')}}" method="post" enctype="multipart/from-data">
                         @csrf
                         <div class="form-group">
                             <label for="">Masukan Nama produk</label>
-                            <input type="text" name="nama_produk" class="form-control @error('nama_produk') is-invalid @enderror">
-                            @error('nama_produk')
+                            <input type="text" name="nama" class="form-control @error('nama_produk') is-invalid @enderror">
+                            @error('nama')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -31,8 +31,8 @@
                         </div>
                         <div class="form-group">
                             <label for="">Masukan harga produk</label>
-                            <input type="text" name="nama_produk" class="form-control @error('harga_produk') is-invalid @enderror">
-                            @error('harga_produk')
+                            <input type="text" name="harga" class="form-control @error('harga_produk') is-invalid @enderror">
+                            @error('harga')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -40,8 +40,8 @@
                         </div>
                         <div class="form-group">
                             <label for="">Masukan total item</label>
-                            <input type="text" name="nama_produk" class="form-control @error('total_item') is-invalid @enderror">
-                            @error('total_item')
+                            <input type="text" name="total" class="form-control @error('total_item') is-invalid @enderror">
+                            @error('total')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Masukan Deskripsi</label>
-                            <input type="text" name="nama_produk" class="form-control @error('deskripsi') is-invalid @enderror">
+                            <input type="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror">
                             @error('deskripsi')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Masukan Foto</label>
-                            <input type="text" name="nama_produk" class="form-control @error('cover') is-invalid @enderror">
+                            <input type="file" name="cover" class="form-control @error('cover') is-invalid @enderror">
                             @error('cover')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
