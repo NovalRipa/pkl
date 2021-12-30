@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\produk;
 use Illuminate\Http\Request;
+use Session;
+
 
 class produkController extends Controller
 {
@@ -52,6 +54,10 @@ class produkController extends Controller
         $produk->deskripsi = $request->deskripsi;
         $produk->cover = $request->cover;
         $produk->save();
+        session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Data saved successfully",
+        ]);
         return redirect()->route('produk.index');
     }
 
@@ -93,12 +99,30 @@ class produkController extends Controller
     {
         //
         $validated = $request->validate([
-            'nama_produk' => 'required',
+            'nama' => 'required',
+            'harga' => 'required',
+            'total' => 'required',
+            'deskripsi' => 'required',
+            'cover' => 'required|image|max:2048'
         ]);
 
         $produk = produk::findOrFail($id);
-        $produk->nama_produk = $request->nama_produk;
+        $produk->nama_produk = $request->nama;
+        $produk->harga_produk = $request->harga;
+        $produk->total_item = $request->total;
+        $produk->deskripsi = $request->deskripsi;
+        $produk->cover = $request->cover;
+        if ($request->hasFile('cover')) {
+            $image = $request->file('cover');
+            $name = rand(1000, 9999)."".$request->$cover->getClientOriginalName();
+            $image->move('image/produk/', $name);
+            $produk->cover = $name;
+        }
         $produk->save();
+        session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Data saved successfully",
+        ]);
         return redirect()->route('produk.index');
     }
 
@@ -113,6 +137,10 @@ class produkController extends Controller
         //
         $produk = produk::findOrFail($id);
         $produk->delete();
+        session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Data delete successfully",
+        ]);
         return redirect()->route('produk.index');
     }
 }

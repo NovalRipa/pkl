@@ -8,21 +8,28 @@ use Illuminate\Database\Eloquent\Model;
 class produk extends Model
 {
     use HasFactory;
-       //memberikan akses field apa saja yang boleh di isi
-       protected $fillable = ['nama_produk'];
+    protected $fillable = ['nama','harga', 'total', 'deskripsi', 'cover'];
 
-       //memberikan akses field apa saja yang boleh di lihat
-       //atau di keluarkan
-       protected $visible = ['nama_produk'];
-   
-       //mencatat waktu pembuatan & update data secara otomatis
-       public $timestamps = true;
-   
-       //membuat relasi one to many dengan model "destinasi"
-       public function produk()
-       {
-           //Model 'wisatahor' bisa memiliki banyak data dari
-           //model 'destinasi' melalui fk 'wisata_id'
-           return $this->hasMany('App\Models\produk', 'id_member');
-       }
+    //membuat relasi one to many dengan model "produk"
+    public function produk()
+    {
+        //data Model 'destinasi' bisa dimiliki oleh Model 'Author'
+        //melalui fk "produk-id"
+        return $this->belongsTo('App\Models\produk', 'nama');
+    }
+    public function image()
+    {
+        if ($this->cover && file_exists(public_path('image/produk/' .$this->cover))){
+            return asset('image/produk/' .$this->cover);
+        } else {
+            return asset('image/no_image.png');
+        }
+    }
+
+    public function deleteImage()
+    {
+        if ($this->cover && file_exists(public_path('image/produk/' . $this->cover))) {
+            return unlink(public_path('image/produk/' . $this->cover));
+        }
+    }
 }

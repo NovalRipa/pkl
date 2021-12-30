@@ -28,14 +28,15 @@
 @endsection
 
 @section('content')
+@include('layouts._flash')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <!-- <div class="card-header">
+                <div class="card-header">
                     Data produk
                     <a href="{{route('produk.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah produk</a>
-                </div> -->
+                </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table" id="example">
@@ -59,8 +60,8 @@
                                     <td>{{$data->harga_produk}}</td>
                                     <td>{{$data->total_item}}</td>
                                     <td>{{$data->deskripsi}}</td>
-                                    <td><img src="" alt="" style="width:100px; height:100px;" alt="Cover"></td>
-                                    <td>
+                                    <td><img src="{{$data->image()}}" alt="" style="width:100px; height:100px;" alt="Cover"></td>
+                                <td>
                                         <form action="{{route('produk.destroy',$data->id)}}" method="post">
                                             @method('delete')
                                             @csrf

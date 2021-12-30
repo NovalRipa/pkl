@@ -16,7 +16,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Data produk</div>
+                <div class="card-header">Edit Data produk</div>
                 <div class="card-body">
                     <form action="{{route('produk.update',$produk->id)}}" method="post" enctype="multipart/from-data">
                         @csrf
@@ -58,13 +58,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukan Foto</label>
-                            <input type="file" name="cover" class="form-control @error('cover') is-invalid @enderror">
-                            @error('cover')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <label for="">Masukan Cover</label>
+                            <br>
+                            <img src="{{ $produk->image() }}" height="75" style="padding:10px;" />
+                            <input type="file" name="cover" class="form-control">
                         </div>
                         <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>

@@ -250,25 +250,15 @@ return [
             'text'        => 'produk',
             'url'         => 'admin/produk',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'        => 'beranda',
+            'url'         => 'layout/member/beranda',
+            'icon'        => 'far fa-fw fa-file',
+            'label_color' => 'success',
         ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+       
     ],
 
     /*
