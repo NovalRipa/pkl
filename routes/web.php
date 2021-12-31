@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\produkController;
+use App\Http\Controllers\berandaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,14 +25,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function (){
     Route::get('/', function(){
-        return view('auth.login');
+        return view('beranda');
     });
     Route::resource('produk', produkController::class)->middleware('role:admin');
 });
 
 Route::group(['prefix' => 'member', 'middleware' => ['auth', 'role:member']], function (){
     Route::get('/', function(){
-        return view('auth.login');
+        return view('beranda');
     });
-    Route::resource('beranda', berandaController::class)->middleware('role:member');
 });    

@@ -30,14 +30,14 @@ class UserSeeder extends Seeder
         $admin = new User();
         $admin->name = "Admin Pkl";
         $admin->email = "admin@gmail.com";
-        $admin->password = Hash::make('1');
+        $admin->password = Hash::make('a');
         $admin->save();
         $admin->attachRole($adminRole);
 
         $member = new User();
         $member->name = "Member Use";
         $member->email = "member@gmail.com";
-        $member->password = Hash::make('2');
+        $member->password = Hash::make('d');
         $member->save();
         $admin->attachRole($memberRole);
     }

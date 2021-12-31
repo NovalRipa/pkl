@@ -254,7 +254,7 @@ return [
         ],
         [
             'text'        => 'beranda',
-            'url'         => 'layout/member/beranda',
+            'url'         => '/beranda',
             'icon'        => 'far fa-fw fa-file',
             'label_color' => 'success',
         ],

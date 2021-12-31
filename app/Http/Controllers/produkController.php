@@ -103,7 +103,6 @@ class produkController extends Controller
             'harga' => 'required',
             'total' => 'required',
             'deskripsi' => 'required',
-            'cover' => 'required|image|max:2048'
         ]);
 
         $produk = produk::findOrFail($id);
@@ -111,10 +110,10 @@ class produkController extends Controller
         $produk->harga_produk = $request->harga;
         $produk->total_item = $request->total;
         $produk->deskripsi = $request->deskripsi;
-        $produk->cover = $request->cover;
         if ($request->hasFile('cover')) {
+            $produk->deleteImage();
             $image = $request->file('cover');
-            $name = rand(1000, 9999)."".$request->$cover->getClientOriginalName();
+            $name = rand(1000, 9999). $image->getClientOriginalName();
             $image->move('image/produk/', $name);
             $produk->cover = $name;
         }
