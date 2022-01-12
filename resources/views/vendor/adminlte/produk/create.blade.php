@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="card-header">Data produk</div>
                 <div class="card-body">
-                    <form action="{{route('produk.store')}}" method="post" enctype="multipart/from-data">
+                    <form action="{{route('produk.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="">Masukan Nama produk</label>
@@ -58,8 +58,8 @@
                         </div>
                         <div class="form-group">
                             <label for="">Masukan Foto</label>
-                            <input type="file" name="cover" class="form-control @error('cover') is-invalid @enderror">
-                            @error('cover')
+                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror">
+                            @error('image')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

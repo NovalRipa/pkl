@@ -117,7 +117,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -140,7 +140,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -163,7 +163,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -186,7 +186,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -221,7 +221,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -244,7 +244,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -266,7 +266,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -289,7 +289,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -317,7 +317,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -337,7 +337,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -356,7 +356,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">
@@ -376,7 +376,7 @@ box-shadow: 0px 0px 24px 0px rgba(240,237,240,1);
                             <div class="col-xs-6 col-sm-3">
                                 <div class="schauhan-product-item">
                                     <div class="schauhan-product-photo">
-                                        <a href="#"><img src="{{ asset(config('adminlte.logo_img')) }}" class="img-responsive" alt="a" /></a>
+                                        <a href="#"><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" class="img-responsive" alt="a" /></a>
                                     </div>
                                     <div class="schauhan-product-info">
                                         <div class="schauhan-product-title">

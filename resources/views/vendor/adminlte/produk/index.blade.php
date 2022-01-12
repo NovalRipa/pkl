@@ -60,7 +60,7 @@
                                     <td>{{$data->harga_produk}}</td>
                                     <td>{{$data->total_item}}</td>
                                     <td>{{$data->deskripsi}}</td>
-                                    <td><img src="{{$data->image()}}" alt="" style="width:100px; height:100px;" alt="Cover"></td>
+                                    <td><img src="{{$data->image()}}" alt="" style="width:100px; height:100px;" alt="image"></td>
                                 <td>
                                         <form action="{{route('produk.destroy',$data->id)}}" method="post">
                                             @method('delete')

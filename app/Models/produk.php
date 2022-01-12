@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class produk extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama','harga', 'total', 'deskripsi', 'cover'];
+    protected $table = "produks";
+    protected $fillable = ['nama','harga', 'total', 'deskripsi', 'image'];
 
     //membuat relasi one to many dengan model "produk"
     public function produk()
@@ -17,19 +18,17 @@ class produk extends Model
         //melalui fk "produk-id"
         return $this->belongsTo('App\Models\produk', 'nama');
     }
-    public function image()
+    function image()
     {
-        if ($this->cover && file_exists(public_path('image/produk/' .$this->cover))){
-            return asset('image/produk/' .$this->cover);
-        } else {
-            return asset('image/no_image.png');
-        }
+        if ($this->image && file_exists(public_path('images/produk/' . $this->image)))
+            return asset('images/produk/' . $this->image);
+        else
+            return asset('images/no_image.png');
     }
 
-    public function deleteImage()
+    function delete_image()
     {
-        if ($this->cover && file_exists(public_path('image/produk/' . $this->cover))) {
-            return unlink(public_path('image/produk/' . $this->cover));
-        }
+        if ($this->image && file_exists(public_path('images/produk/' . $this->image)))
+            return unlink(public_path('images/produk/' . $this->image));
     }
 }

@@ -19,7 +19,7 @@ class CreateProduksTable extends Migration
             $table->integer('harga_produk');
             $table->integer('total_item');
             $table->string('deskripsi');
-            $table->string('cover')->nullable();;
+            $table->string('image')->nullable();;
             $table->timestamps();
         });
     }

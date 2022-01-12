@@ -140,7 +140,7 @@ img {vertical-align: middle;}
 <body>
   <!--Navbar-->
   <ul>
-    <li><a class="active" href="{{ url('member/Plaki_laki')}}">Beranda</a></li>
+    <li><a class="active" href="">Beranda</a></li>
     <li><a href="">Produks</a></li>
     <!-- Authentication Links -->
     @guest
@@ -168,7 +168,7 @@ img {vertical-align: middle;}
         @csrf
       </form>
     </div>
-  </li>
+</li>
   @endguest
 </ul>
 

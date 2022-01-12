@@ -58,10 +58,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukan Cover</label>
+                            <label for="">Masukan image</label>
                             <br>
                             <img src="{{ $produk->image() }}" height="75" style="padding:10px;" />
-                            <input type="file" name="cover" value="{{ $produk->cover }}" class="form-control">
+                            <input type="file" name="image" value="{{ $produk->image }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>

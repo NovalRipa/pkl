@@ -44,7 +44,8 @@ class produkController extends Controller
             'nama' => 'required',
             'harga' => 'required',
             'total' => 'required',
-            'deskripsi' => 'required'
+            'deskripsi' => 'required',
+            'image' => 'required|image|max:2048',
         ]);
 
         $produk = new produk;
@@ -52,7 +53,13 @@ class produkController extends Controller
         $produk->harga_produk = $request->harga;
         $produk->total_item = $request->total;
         $produk->deskripsi = $request->deskripsi;
-        $produk->cover = $request->cover;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('images/produk', $name);
+            $produk->image = $name;
+        }
         $produk->save();
         session::flash("flash_notification", [
             "level" => "success",
@@ -110,12 +117,12 @@ class produkController extends Controller
         $produk->harga_produk = $request->harga;
         $produk->total_item = $request->total;
         $produk->deskripsi = $request->deskripsi;
-        if ($request->hasFile('cover')) {
+        if ($request->hasFile('image')) {
             $produk->deleteImage();
-            $image = $request->file('cover');
+            $image = $request->file('image');
             $name = rand(1000, 9999). $image->getClientOriginalName();
-            $image->move('image/produk/', $name);
-            $produk->cover = $name;
+            $image->move('images/produk/', $name);
+            $produk->image = $name;
         }
         $produk->save();
         session::flash("flash_notification", [

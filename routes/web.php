@@ -34,4 +34,5 @@ Route::group(['prefix' => 'member', 'middleware' => ['auth', 'role:member']], fu
     Route::get('/', function(){
         return view('beranda');
     });
+    
 });    

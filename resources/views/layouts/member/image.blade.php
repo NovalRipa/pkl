@@ -198,9 +198,10 @@ body{
     </nav>
     <!-- filter Images -->
     <div class="gallery">
-      <div class="image" data-name="shoe"><span><img src="images/shoe-1.jpg" alt=""></span></div>
-      <div class="image" data-name="watch"><span><img src="images/watch-1.jpg" alt=""></span></div>
-      <div class="image" data-name="camera"><span><img src="images/camera-2.jpg" alt=""></span></div>
+      <div class="image" data-name="shoe"><span><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" alt=""></span></div>
+      <div class="image" data-name="watch"><span><img src="{{ asset('assets/header/baju _muslim _wanita _cover.jpg') }}" alt=""></span></div>
+      <div class="image" data-name="camera"><span><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" alt=""></span></div>
+      <div class="image" data-name="camera"><span><img src="{{ asset('assets/header/anak perempuan.jpg') }}" alt=""></span></div>
     </div>
   </div>
   <!-- fullscreen img preview box -->
