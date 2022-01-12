@@ -12,6 +12,7 @@ ul {
   overflow: hidden;
   background-color: #333;
   width: 2000px;
+  height: 90px;
   border-radius: 7px;
 }
 
@@ -140,8 +141,9 @@ img {vertical-align: middle;}
 <body>
   <!--Navbar-->
   <ul>
-    <li><a class="active" href="{{ url('member/Plaki_laki')}}">Beranda</a></li>
+    <li><a class="active" href="">Beranda</a></li>
     <li><a href="">Produks</a></li>
+    @extends('layouts.app')
     <!-- Authentication Links -->
     @guest
     @if (Route::has('login'))

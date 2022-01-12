@@ -15,24 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function (){
-    Route::get('/', function(){
+
+Route::get('/', function(){
         return view('beranda');
     });
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function (){
+    
     Route::resource('produk', produkController::class)->middleware('role:admin');
 });
-
-Route::group(['prefix' => 'member', 'middleware' => ['auth', 'role:member']], function (){
-    Route::get('/', function(){
-        return view('beranda');
-    });
-    
-});    

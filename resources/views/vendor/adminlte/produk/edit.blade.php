@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Masukan Deskripsi</label>
-                            <input type="text" name="deskripsi"value="{{ $produk->deskripsi }}" class="form-control @error('$produk->deskripsi') is-invalid @enderror">
+                            <input type="text" name="deskripsi" value="{{ $produk->deskripsi }}" class="form-control @error('$produk->deskripsi') is-invalid @enderror">
                             @error('deskripsi')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

@@ -186,6 +186,8 @@ body{
     </style>
 </head>
 <body>
+  <br><br><br>
+<center><h3>Kategori</h3></center>
   <div class="wrapper">
     <!-- filter Items -->
     <nav>
@@ -198,7 +200,7 @@ body{
     </nav>
     <!-- filter Images -->
     <div class="gallery">
-      <div class="image" data-name="shoe"><span><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" alt=""></span></div>
+      <div class="image" data-name="shoe"><span><img src="https://s3.bukalapak.com/img/88947808932/s-330-330/2020-07-23T00%3A11%3A25%2B07%3A00.jpeg.webp" alt=""></span></div>
       <div class="image" data-name="watch"><span><img src="{{ asset('assets/header/baju _muslim _wanita _cover.jpg') }}" alt=""></span></div>
       <div class="image" data-name="camera"><span><img src="{{ asset('assets/header/baju_muslim_laki2_cover.jpg') }}" alt=""></span></div>
       <div class="image" data-name="camera"><span><img src="{{ asset('assets/header/anak perempuan.jpg') }}" alt=""></span></div>
