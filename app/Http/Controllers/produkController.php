@@ -18,7 +18,15 @@ class produkController extends Controller
     {
         //
         $produk = produk::all();
-        return view('vendor.adminlte.produk.index', compact('produk'));
+         return view('vendor.adminlte.produk.index', compact('produk'));
+        
+        // return response()->json([
+        //     'success' => true,
+        //     'message' => 'harga',
+        //     'data' => $produk
+
+        // ],200);
+
     }
 
     /**

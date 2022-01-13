@@ -24,6 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', function(){
         return view('beranda');
     });
+    
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function (){
     
     Route::resource('produk', produkController::class)->middleware('role:admin');
